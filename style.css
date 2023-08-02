@@ -21,6 +21,6 @@ body {
     text-align: center;
     background: #2b2b2b;
 }
-#data-container {
-    padding-top: 10%;
+.typeSelection {
+    font-size: medium;
 }
