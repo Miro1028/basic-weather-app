@@ -18,13 +18,13 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     let celc = document.getElementById("celcius-radio");
     let faren = document.getElementById("farenheit-radio");
-    let radios = document.getElementById("radios")
+    let city = document.getElementById("city-choosing").value;
 
     if (data.main && data.main.temp) {
         console.log(celc)
         if (celc.checked == true) {
             let temperature = (data.main.temp - 273.15); // Convert Kelvin to Celsius and round to 2 decimal places
-            dataContainer.innerHTML = `<p>${Math.floor(temperature)}&#8451;</p>`;
+            dataContainer.innerHTML = `<p>City: ${city}<br>${Math.floor(temperature)}&#8451;</p>`;
         } else if (faren.checked == true) {
             let temperature = (data.main.temp); // Convert Kelvin to Celsius and round to 2 decimal places
             dataContainer.innerHTML = `<p>${Math.floor(temperature)}&deg;F</p>`;
