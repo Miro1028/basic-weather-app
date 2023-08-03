@@ -27,7 +27,7 @@ function displayData(data) {
             dataContainer.innerHTML = `<p>City: ${city}<br>${Math.floor(temperature)}&#8451;</p>`;
         } else if (faren.checked == true) {
             let temperature = (data.main.temp); // Convert Kelvin to Celsius and round to 2 decimal places
-            dataContainer.innerHTML = `<p>${Math.floor(temperature)}&deg;F</p>`;
+            dataContainer.innerHTML = `<p>City: ${city}<br>${Math.floor(temperature)}&deg;F</p>`;
         }
     } else {
         dataContainer.innerHTML = '<p>Temperature data not available.</p>';
